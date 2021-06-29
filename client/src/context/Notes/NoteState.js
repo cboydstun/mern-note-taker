@@ -43,8 +43,6 @@ const NoteState = (props)=>{
                 {props.children}
         </NoteContext.Provider>
     )
-
-
 }
 
 export default NoteState;
