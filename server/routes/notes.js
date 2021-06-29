@@ -15,7 +15,6 @@ router.post("/", async(req, res)=>{
     res.json({messages:'New Note saved Successfully'})        
     } catch (error) {
         return res.status(500).json({
-            success: false,
             error: "Server Error"
         })
     }
@@ -28,7 +27,6 @@ router.get("/", async(req, res)=>{
         res.json({notes:notes});
     } catch (error) {
         return res.status(500).json({
-            success: false,
             error: "Server Error"
         })
     }
@@ -41,7 +39,6 @@ router.get("/:id", async(req, res)=>{
         res.json({note:note});
     } catch (error) {
         return res.status(500).json({
-            success: false,
             error: "Server Error"
         })
     }
@@ -57,7 +54,6 @@ router.put("/:id", async(req, res)=>{
         res.status(200).json({message:'Note updated successfully'})        
     } catch (error) {
         return res.status(500).json({
-            success: false,
             error: "Server Error"
         })
     }
@@ -70,7 +66,6 @@ router.delete("/:id", async(req, res)=>{
         res.status(200).json('Note deleted successfully')
     } catch (error) {
         return res.status(500).json({
-            success: false,
             error: "Server Error"
         })
     }
