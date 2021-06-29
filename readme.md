@@ -1,10 +1,10 @@
-## MERN Note Taking Application
+## MERN Note Taker Application
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone git@github.com:cboydstun/mern-expense-tracker.git
+   git clone git@github.com:cboydstun/mern-note-taker.git
    ```
 2. Install Server Packages
    ```sh
