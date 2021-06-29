@@ -16,7 +16,7 @@ const noteSchema = new Schema({
     priority:{
         type:String
     },
-    date:{
+    createdAt:{
         type:Date,
         default:Date.now
     }   
