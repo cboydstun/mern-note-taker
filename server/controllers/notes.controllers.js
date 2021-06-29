@@ -12,9 +12,9 @@ notesCtrl.getNote = async (req,res)=>{
 }
 
 notesCtrl.createNote = async (req,res)=>{
-    const {author,title,content,priority} = req.body;
+    const {author,title,content,priority,date} = req.body;
     const newNote = new Note({
-        author,title,content,priority
+        author,title,content,priority,date
     });
     newNote.save()
     res.json({messages:'New Note saved Successfully'})
@@ -26,9 +26,9 @@ notesCtrl.deleteNote = async (req,res)=>{
 }
 
 notesCtrl.updateNote = async(req,res)=>{
-    const {author,title,content,priority} = req.body;
+    const {author,title,content,priority,date} = req.body;
     await Note.findByIdAndUpdate(req.params.id,{
-        author,title,content,priority
+        author,title,content,priority,date
     })
     res.status(200).json({message:'Note updated successfully'})
 }
