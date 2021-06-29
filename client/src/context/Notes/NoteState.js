@@ -16,7 +16,7 @@ const NoteState = (props)=>{
     const [state, dispatch] = useReducer(NoteReducer, initialState);
 
     const getNotes = async()=>{
-        const res = await axios.get('http://localhost:5001/api/notes');
+        const res = await axios.get('/api/notes');
         dispatch({type:GET_NOTES,payload:res.data.notes})
     }
 

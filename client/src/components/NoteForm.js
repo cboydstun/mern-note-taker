@@ -42,16 +42,15 @@ const NoteForm =()=>{
         }
         console.log(newNote);
         if(editing){
-            console.log('http://localhost:5001/api/notes/'+selectedNote);
-            await axios.put('http://localhost:5001/api/notes/'+selectedNote,newNote);
+            await axios.put('/api/notes/'+selectedNote,newNote);
         }else{
-            await axios.post('http://localhost:5001/api/notes',newNote)
+            await axios.post('/api/notes',newNote)
         }
         window.location.href='/'
     }
 
     const getNote= async(id)=>{
-        const res = await axios.get('http://localhost:5001/api/notes/'+id)
+        const res = await axios.get('/api/notes/'+id)
         console.log(res);
         setValues({
             title:res.data.note.title,

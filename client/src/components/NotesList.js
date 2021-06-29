@@ -12,7 +12,7 @@ const NotesList =()=>{
     },[]);
 
     const deleteNote = async (id)=>{
-        await axios.delete('http://localhost:5001/api/notes/'+id);
+        await axios.delete('/api/notes/'+id);
         getNotes();
     }
 
