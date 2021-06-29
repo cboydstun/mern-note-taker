@@ -1,5 +1,5 @@
 import React, {useContext,useEffect,useState} from 'react';
-import logo from '../logo.svg'
+import logo from '../logo.svg';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 
@@ -42,6 +42,7 @@ const NoteForm =()=>{
         }
         console.log(newNote);
         if(editing){
+            console.log('/api/notes/'+selectedNote);
             await axios.put('/api/notes/'+selectedNote,newNote);
         }else{
             await axios.post('/api/notes',newNote)
@@ -68,7 +69,7 @@ const NoteForm =()=>{
         else{
             setValues({...state})
         }
-    },[editing, selectedNote])
+    },[editing,selectedNote])
 
     return (
         <div className="card shadow-lg">

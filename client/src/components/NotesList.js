@@ -31,8 +31,8 @@ const NotesList =()=>{
                                     <div className="d-flex justify-content-between">
                                         <h4>Note</h4>
                                         <div>
-                                            <a onClick={()=>editNote(note._id)}><i className="fas fa-edit ml-2"></i></a>
-                                            <a onClick={()=>deleteNote(note._id)}><i className="fas fa-trash ml-2"></i></a>
+                                            <a href="#!" onClick={()=>editNote(note._id)}><i className="fas fa-edit ml-2"></i></a>
+                                            <a href="#!" onClick={()=>deleteNote(note._id)}><i className="fas fa-trash ml-2"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -45,6 +45,7 @@ const NotesList =()=>{
                                         :(note.priority==='Low'?
                                             <p className="font-weight-bold text-info">priority: {note.priority}</p>
                                         :<p className="font-weight-bold text-danger">priority: {note.priority}</p>)
+                                        
                                     }
                                     <h6>by: {note.author}</h6>
                                 </div>

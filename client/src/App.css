@@ -3,6 +3,10 @@
   margin-left: 25%;
 }
 
+.form-control {
+  margin: 0.25rem;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
