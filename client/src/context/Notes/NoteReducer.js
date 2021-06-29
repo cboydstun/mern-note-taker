@@ -5,6 +5,7 @@ import {GET_NOTES,
 const NoteReducer = (state,action)=>{
 
     const {payload,type} = action;
+    
     switch(type){
         case GET_NOTES:
             return{

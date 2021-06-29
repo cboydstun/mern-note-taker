@@ -8,10 +8,13 @@ const Note = require('../models/Note')
 router.post("/", async(req, res)=>{
     try {
     const {author,title,content,priority,date} = req.body;
+
     const newNote = new Note({
         author,title,content,priority,date
     });
+
     newNote.save()
+
     res.json({messages:'New Note saved Successfully'})        
     } catch (error) {
         return res.status(500).json({

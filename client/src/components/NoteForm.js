@@ -107,6 +107,7 @@ const NoteForm =()=>{
                             value={values.priority}
                             onChange={e=>handleInputChange(e)}
                             className="form-control">
+                        <option value="">Select Priority</option>                                
                         <option value="High">High</option>
                         <option value="Medium">Medium</option>
                         <option value="Low">Low</option>
