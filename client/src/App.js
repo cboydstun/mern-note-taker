@@ -12,17 +12,19 @@ import './App.css'
 
 export default function App() {
   return (
-    <div className="container mt-4">
-      <NoteState>
-        <div className="row">
-          <div className="col-md-4">
-            <NoteForm/>
+    <div className="App">
+      <div className="container mt-4">
+        <NoteState>
+          <div className="row">
+            <div className="col-md-4">
+              <NoteForm />
+            </div>
+            <div className="col-md-8">
+              <NotesList />
+            </div>
           </div>
-          <div className="col-md-8">
-            <NotesList/>
-          </div>
-        </div>
-      </NoteState>
+        </NoteState>
+      </div>
     </div>
   );
 }

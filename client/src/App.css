@@ -3,6 +3,10 @@
   margin-left: 25%;
 }
 
+body {
+  background-color: #53c1de;
+}
+
 .form-control {
   margin: 0.25rem;
 }

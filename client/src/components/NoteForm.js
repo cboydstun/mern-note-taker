@@ -75,6 +75,8 @@ const NoteForm =()=>{
         <div className="card shadow-lg">
             <div className="card-body">
                 <img src={logo} alt="App-logo" className="App-logo"/>
+                <h2 className="logo">Add Note</h2>
+
                 <div className="form-group">
                         <input type="text" 
                             name="author"
@@ -84,6 +86,7 @@ const NoteForm =()=>{
                             className="form-control"
                             autoFocus/>
                 </div>
+
                 <div className="form-group">
                     <input type="text" 
                         name="title"
@@ -93,15 +96,19 @@ const NoteForm =()=>{
                         className="form-control"
                         />
                 </div>
+
                 <div className="form-group">
                     <textarea 
-                            name="content" 
-                            rows="5"
-                            value={values.content}
-                            onChange={e=>handleInputChange(e)}
-                            className="form-control"
-                            placeholder="Description"></textarea>
+                        name="content" 
+                        rows="5"
+                        value={values.content}
+                        onChange={e=>handleInputChange(e)}
+                        className="form-control"
+                        placeholder="Description"
+                    >
+                    </textarea>
                 </div>
+
                 <div className="form-group">
                     <select name="priority"
                             value={values.priority}
@@ -113,12 +120,14 @@ const NoteForm =()=>{
                         <option value="Low">Low</option>
                     </select>
                 </div>
+
                 <div className="form-group">
                     <DatePicker
                         selected={values.date}
                         onChange={onChangeDate}
                         className="form-control"/>
                 </div>
+                
                 <form onSubmit={handleSubmit}>
                     <button type="submit"
                         className="btn btn-primary btn-block">{editing?'Update':'Save'}</button>
